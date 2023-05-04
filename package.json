@@ -13,11 +13,11 @@
 		"build": "tsoa spec-and-routes && tsc",
 		"start": "node build/src/server.js",
 		"format": "prettier --write .",
+		"prepare": "husky install",
 		"sls:local": "sls offline -s dev --reloadHandler",
 		"deploy:dev": "serverless deploy --stage dev",
 		"deploy:stg": "serverless deploy --stage stg",
-		"deploy:prod": "serverless deploy --stage prod",
-		"prepare": "husky install"
+		"deploy:prod": "serverless deploy --stage prod"
 	},
 	"keywords": [],
 	"author": "",
