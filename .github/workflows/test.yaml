@@ -1,14 +1,13 @@
-name: Check, fix and enforce style guide using linting
+name: Unit and integration tests
 
 on:
-  pull_request: ~
-  push: ~
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  lint:
+  tests:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/prepare
-      - run: yarn lint
+      - run: yarn test
